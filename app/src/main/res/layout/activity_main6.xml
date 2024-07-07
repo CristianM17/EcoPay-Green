@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="410dp"
+        android:layout_height="49dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header" />
+
+    <TextView
+        android:id="@+id/registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="171dp"
+        android:text="REGISTRO"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <EditText
+        android:id="@+id/promedioReciclado"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondoedittext"
+        android:ems="10"
+        android:hint=" Kg"
+        android:inputType="text"
+        android:textColor="#ADB5BD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaCategorias" />
+
+    <TextView
+        android:id="@+id/textPromedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de material"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/promedioReciclado"
+        app:layout_constraintStart_toStartOf="@+id/promedioReciclado" />
+
+    <Spinner
+        android:id="@+id/listaCategorias"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registro" />
+
+    <TextView
+        android:id="@+id/opciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Categorias"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/listaCategorias"
+        app:layout_constraintStart_toStartOf="@+id/listaCategorias" />
+
+    <EditText
+        android:id="@+id/ganado"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondoedittext"
+        android:ems="10"
+        android:hint=" peso/kg"
+        android:inputType="text"
+        android:textColor="#ADB5BD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promedioReciclado" />
+
+    <TextView
+        android:id="@+id/textGanado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor ganado"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/ganado"
+        app:layout_constraintStart_toStartOf="@+id/ganado" />
+
+
+    <EditText
+        android:id="@+id/fecha"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondoedittext"
+        android:ems="10"
+        android:hint=" dd/MM/yyyy"
+        android:inputType="date"
+        android:textColor="#ADB5BD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ganado" />
+
+    <TextView
+        android:id="@+id/textFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/fecha"
+        app:layout_constraintStart_toStartOf="@+id/fecha" />
+
+    <Button
+        android:id="@+id/crearCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="#009F4B"
+        android:text="Crear"
+        app:layout_constraintBottom_toTopOf="@+id/casa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/casa"
+        android:layout_width="65dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="homes"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="409dp"
+        android:layout_height="54dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/footer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

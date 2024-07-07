@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EcoPay Green</string>
+    <string name="consejos">Consejos</string>
+    <string name="estadisticas" />
+    <string name="categorias" />
+    <string name="registros" />
+</resources>
