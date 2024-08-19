@@ -1,26 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
-    <Button
-        android:id="@+id/btncrearCuenta"
-        android:layout_width="338dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginBottom="70dp"
-        android:backgroundTint="#286443"
-        android:text="Crear nueva cuenta"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="412dp"
+        android:layout_height="241dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textLogo"
+        android:layout_width="321dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="90dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="¡Bienvenido a ecopay green!"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="266dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="15dp"
+        android:text="Llene los siguientes datos para ingresar a la plataforma"
+        android:textAlignment="center"
+        android:textColor="#676767"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/user"
+        android:layout_width="338dp"
+        android:layout_height="54dp"
+        android:background="@drawable/fondoedittext"
+        android:hint=" Usuario"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
     <EditText
         android:id="@+id/txtPassword"
@@ -35,18 +71,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.577" />
 
-    <EditText
-        android:id="@+id/correo"
-        android:layout_width="338dp"
-        android:layout_height="54dp"
-        android:background="@drawable/fondoedittext"
-        android:hint=" Usuario"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="13dp"
+        android:text="Recordame"
+        app:layout_constraintBottom_toTopOf="@+id/btningresar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintTop_toTopOf="@+id/txtPassword"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="27dp"
+        android:text="Olvidé contraseña"
+        app:layout_constraintBottom_toTopOf="@+id/btningresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btningresar"
@@ -59,6 +108,22 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+    <Button
+        android:id="@+id/btncrearCuenta"
+        android:layout_width="338dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#286443"
+        android:text="Crear nueva cuenta"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,55 +182,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/terminoscondiciones"
         app:layout_constraintStart_toEndOf="@+id/terminoslegales" />
-
-    <ImageView
-        android:id="@+id/imageButton2"
-        android:layout_width="412dp"
-        android:layout_height="241dp"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="266dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="15dp"
-        android:text="Llene los siguientes datos para ingresar a la plataforma"
-        android:textAlignment="center"
-        android:textColor="#676767"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-        tools:ignore="MissingConstraints" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginBottom="13dp"
-        android:text="Recordame"
-        app:layout_constraintBottom_toTopOf="@+id/btningresar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtPassword"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="27dp"
-        android:text="Olvidé contraseña"
-        app:layout_constraintBottom_toTopOf="@+id/btningresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

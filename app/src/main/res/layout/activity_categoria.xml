@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="410dp"
+        android:layout_height="49dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header" />
+
+    <TextView
+        android:id="@+id/consejo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="171dp"
+        android:text="CATEGORÍA"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consejo"
+        app:layout_constraintBottom_toTopOf="@+id/casa">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="316dp"
+                android:layout_height="223dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cuadrocatg" />
+
+            <TextView
+                android:id="@+id/textPromedio"
+                android:layout_width="103dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="24dp"
+                android:text="Crear Categoria"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/material"
+                app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+
+            <Button
+                android:id="@+id/crearCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#009F4B"
+                android:text="Crear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <EditText
+                android:id="@+id/material"
+                android:layout_width="264dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/fondoedittext"
+                android:ems="10"
+                android:hint=" Material"
+                android:inputType="text"
+                android:textColor="#ADB5BD"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.481"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <EditText
+                android:id="@+id/descripcion"
+                android:layout_width="260dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="40dp"
+                android:gravity="top|start"
+                android:hint="..."
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/material" />
+
+            <TextView
+                android:id="@+id/opciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Categorias"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/listaCategorias"
+                app:layout_constraintStart_toStartOf="@+id/listaCategorias" />
+
+            <Spinner
+                android:id="@+id/listaCategorias"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="130dp"
+                android:background="@drawable/selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Descripcion"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/descripcion"
+                app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/casa"
+        android:layout_width="65dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="homes"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="409dp"
+        android:layout_height="54dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/footer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

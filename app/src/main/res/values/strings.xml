@@ -4,4 +4,10 @@
     <string name="estadisticas" />
     <string name="categorias" />
     <string name="registros" />
+    <string name="material_mejor_pagado">Material mejor pagado</string> <!-- Agrega esta línea -->
+    <string-array name="materiales_array">
+        <item></item>
+        <item>Promedio</item>
+        <item>@string/material_mejor_pagado</item>
+    </string-array>
 </resources>
